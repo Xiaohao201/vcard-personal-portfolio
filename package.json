@@ -1,0 +1,12 @@
+{
+  "name": "vcard-personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "vCard 个人作品集（静态站点 + Vercel serverless 联系表单）",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

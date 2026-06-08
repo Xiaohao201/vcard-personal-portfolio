@@ -119,6 +119,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+const formStatus = document.querySelector("[data-form-status]");
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
@@ -133,6 +134,48 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
+
+// helper to show status message under the form
+const setFormStatus = function (text, type) {
+  if (!formStatus) return;
+  formStatus.textContent = text;
+  formStatus.className = type ? `form-status form-status--${type}` : "form-status";
+}
+
+// submit the contact form to the backend (sends email via SMTP)
+form.addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  if (!form.checkValidity()) return;
+
+  formBtn.setAttribute("disabled", "");
+  setFormStatus("正在发送…", null);
+
+  try {
+    const payload = {
+      fullname: form.fullname.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const data = await response.json().catch(() => ({}));
+      throw new Error(data.error || `发送失败（${response.status}）`);
+    }
+
+    form.reset();
+    setFormStatus("消息已发送，谢谢！我会尽快回复你。", "ok");
+  } catch (error) {
+    setFormStatus(error.message || "发送失败，请稍后再试。", "error");
+    formBtn.removeAttribute("disabled");
+  }
+});
 
 
 
