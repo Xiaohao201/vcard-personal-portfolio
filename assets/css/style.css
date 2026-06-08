@@ -583,6 +583,9 @@ main {
   scroll-snap-align: center;
 }
 
+/* 仅剩一条评价时占满整行（覆盖大屏下的 50% 宽度） */
+.testimonials-item:only-child { min-width: 100%; }
+
 .testimonials-avatar-box {
   position: absolute;
   top: 0;
