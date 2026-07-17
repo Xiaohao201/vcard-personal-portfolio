@@ -1,3 +1,7 @@
 # These are supported funding model platforms
+# 填入你自己的用户名后取消注释即可启用 GitHub 赞助按钮。
+# 注意：Patreon / Ko-fi 对中国大陆收款有限制，见记忆 payment-constraint-cn-developer。
 
-patreon: codewithsadee # Replace with a single Patreon username
+# patreon:
+# ko_fi:
+# custom: ["https://haoweixu.cn"]

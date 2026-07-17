@@ -15,7 +15,7 @@ vCard is a fully responsive personal portfolio website built with plain HTML, CS
 
 The entire site is a single page (`index.html`) with client-side "page" switching — there is no routing or multi-file navigation.
 
-- **`index.html`** — all content for every section lives here as sibling `<article data-page="...">` elements (about, resume, portfolio, blog, contact). Only the article with the `active` class is visible; the rest are hidden via CSS.
+- **`index.html`** — all content for every section lives here as sibling `<article data-page="...">` elements (about, resume, portfolio, contact). Only the article with the `active` class is visible; the rest are hidden via CSS.
 - **`assets/css/style.css`** (~1900 lines) — single stylesheet. The top `:root` block defines all design tokens (color gradients, solid colors, `--fs-*` font sizes, `--fw-*` weights, transitions) as CSS custom properties. Reuse these variables rather than hardcoding values. Responsive layout is driven by `@media` breakpoints at the bottom of the file.
 - **`assets/js/script.js`** — small vanilla JS file wiring up all interactivity. No framework.
 
