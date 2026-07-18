@@ -55,6 +55,24 @@ overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
+// wechat qr modal variables
+const wechatBtn = document.querySelector("[data-wechat-btn]");
+const wechatModal = document.querySelector("[data-wechat-modal]");
+const wechatOverlay = document.querySelector("[data-wechat-overlay]");
+const wechatCloseBtn = document.querySelector("[data-wechat-close]");
+
+// wechat qr modal toggle function
+const wechatModalFunc = function () { wechatModal.classList.toggle("active"); }
+
+// open on social icon click, close on overlay / close button click
+if (wechatBtn && wechatModal) {
+  wechatBtn.addEventListener("click", wechatModalFunc);
+  wechatCloseBtn.addEventListener("click", wechatModalFunc);
+  wechatOverlay.addEventListener("click", wechatModalFunc);
+}
+
+
+
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");

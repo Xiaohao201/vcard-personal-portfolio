@@ -704,6 +704,20 @@ main {
 
 .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
+.wechat-qr-modal { text-align: center; }
+
+.wechat-qr-img {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.wechat-qr-img img {
+  width: 240px;
+  max-width: 68vw;
+  display: block;
+  border-radius: 10px;
+}
+
 .modal-avatar-box {
   background: var(--bg-gradient-onyx);
   width: max-content;

@@ -128,21 +128,9 @@
         <ul class="social-list">
 
           <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+            <button class="social-link" data-wechat-btn aria-label="微信二维码">
+              <ion-icon name="logo-wechat"></ion-icon>
+            </button>
           </li>
 
         </ul>
@@ -150,6 +138,30 @@
       </div>
 
     </aside>
+
+
+
+    <!--
+      - #wechat qr modal
+    -->
+
+    <div class="modal-container" data-wechat-modal>
+
+      <div class="overlay" data-wechat-overlay></div>
+
+      <section class="testimonials-modal wechat-qr-modal">
+
+        <button class="modal-close-btn" data-wechat-close aria-label="关闭">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+
+        <figure class="wechat-qr-img">
+          <img src="./assets/images/wechat-qr.png" alt="浩苇的微信二维码" loading="lazy">
+        </figure>
+
+      </section>
+
+    </div>
 
 
 
@@ -382,38 +394,14 @@
           <ul class="clients-list has-scrollbar">
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="客户标志">
+              <a href="https://businesstimescn.com/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/client-btcaijing.png" alt="BT财经">
               </a>
             </li>
 
             <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="客户标志">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="客户标志">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="客户标志">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="客户标志">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="客户标志">
+              <a href="https://ibtai.com/" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/images/client-guanyuweishi.png" alt="观舆卫士">
               </a>
             </li>
 
